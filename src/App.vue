@@ -15,12 +15,15 @@ export default {
   data(){
     return{
       TableData : [],
-      header : ['ID','Name','Description','Date','Amount']
+      header : []
     }
   },
   created : function(){
     console.log(TableData);
     this.TableData = TableData;
+    for(let key in TableData[0]){
+      this.header.push(key);
+    }
   }
 }
 </script>
